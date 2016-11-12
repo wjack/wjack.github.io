@@ -1,0 +1,211 @@
+//========
+// Colors
+
+asphalt = #777777
+black = #333333
+blue = #3B5998
+cyan = #5BB3FB
+gray = #BEBEC0
+green = #92EACA
+orange = #DE6E3A
+red = #EE3724
+yellow = #FBCA41
+pink = #F508FF
+purple = #713ADE
+
+//=======
+// Fonts
+
+default-font = 'Cubano', sans-serif
+text-font = 'Roboto', sans-serif
+
+@font-face
+    font-family 'Cubano'
+    src url('/fonts/cubano-webfont.eot')
+    src url('/fonts/cubano-webfont.eot?#iefix') format('embedded-opentype'),
+        url('/fonts/cubano-webfont.woff2') format('woff2'),
+        url('/fonts/cubano-webfont.woff') format('woff'),
+        url('/fonts/cubano-webfont.ttf') format('truetype'),
+        url('/fonts/cubano-webfont.svg#cubanoregular') format('svg')
+    font-weight normal
+    font-style normal
+
+//========
+// Mixins
+
+link-color(c)
+    color c
+    transition color .25s
+
+    &:focus, &:hover
+        color lighten(c, 25%)
+
+//=======
+// Reset
+
+global-reset()
+
+*
+    box-sizing border-box
+
+//========
+// Styles
+
+body
+    font 32px/40px default-font
+    color asphalt
+
+a
+    link-color asphalt
+
+.header
+    margin-top 60px
+
+h1
+    margin-bottom 20px
+    font 48px/48px default-font
+
+    a
+        display block
+        overflow hidden
+        text-decoration none
+
+    .first-name
+        display block
+        float left
+        width 20%
+        text-align right
+        padding-right 10px
+        color cyan
+
+    .last-name
+        display block
+        float left
+        width 80%
+        color pink
+
+.container
+    width 960px
+    margin 0 auto
+
+.description
+    width 100%
+    font 24px/32px text-font
+    margin-left 50px
+
+.hidden
+    display none
+
+a
+    text-decoration none
+
+.quote
+    color black
+
+.tweets
+    font-size 14px
+    margin-top: -25px
+    margin-bottom: 15px
+    overflow: hidden
+    text-overflow: ellipsis
+    white-space: nowrap
+    width: 65%
+
+    a
+        color gray
+
+section
+    overflow hidden
+    margin-bottom 20px
+
+    h2
+        float left
+        width 20%
+        text-align right
+        padding-right 12px
+        color gray
+
+    p, ul
+        float left
+        width 80%
+
+    ul.short
+        width 40%
+
+    li
+        padding-left 20px
+        text-indent -20px
+
+#cool-thing
+    a
+        link-color black
+
+.footer
+    margin 40px 20px 20px
+    font 14px/20px default-font
+    text-align center
+
+.smaller
+    color gray
+    font-size 10px
+
+    a
+        link-color gray
+
+//===============
+// Link Coloring
+
+.drf       { link-color: purple }
+.sbc       { link-color: cyan }
+.facebook  { link-color: blue }
+.github    { link-color: black }
+.twitter   { link-color: cyan }
+.linkedin  { link-color: blue }
+.resume    { link-color: black }
+.shamer    { link-color: red }
+.vc        { link-color: pink }
+.drfbot    { link-color: purple }
+.square    { link-color: black }
+.js        { link-color: cyan }
+.foxtrot   { link-color: red }
+.loc       { link-color: orange }
+.sos       { link-color: purple }
+
+//===============
+// Media Queries
+
+@media (max-width: 1279px)
+  .container
+      width auto
+      padding 0
+
+@media (max-width: 959px)
+    body
+        font 28px/30px default-font
+
+    .logo
+        margin 40px 0 20px 50%
+
+    h1
+        .first-name, .last-name
+            width 50%
+
+    main
+        padding 0 20px
+
+    section
+        margin-bottom 30px
+
+        h2
+            margin-bottom 15px
+            text-align left
+
+        h2, p, ul
+            float none
+            width auto
+
+        li
+            margin-bottom 15px
+
+    .footer
+        font 12px/15px default-font

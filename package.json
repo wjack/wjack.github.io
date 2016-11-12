@@ -1,0 +1,43 @@
+{
+  "name": "yasyf-www",
+  "version": "0.0.1",
+  "engines": {
+    "node": "6.9.1"
+  },
+  "description": "Personal site of Yasyf Mohamedali.",
+  "main": "src/index.js",
+  "scripts": {
+    "start": "./node_modules/.bin/babel-node src/index.js",
+    "heroku-postbuild": "./scripts/postbuild.sh"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/yasyf/www.git"
+  },
+  "author": "Yasyf Mohamedali",
+  "license": "BSD-3-Clause",
+  "bugs": {
+    "url": "https://github.com/yasyf/www/issues"
+  },
+  "homepage": "https://github.com/yasyf/www#readme",
+  "dependencies": {
+    "babel-cli": "6.16.0",
+    "babel-preset-es2015": "6.16.0",
+    "babel-preset-es2016": "6.16.0",
+    "babel-preset-stage-1": "6.16.0",
+    "dotenv": "2.0.0",
+    "ejs": "2.5.2",
+    "express": "^4.12.4",
+    "morgan": "^1.7.0",
+    "nib": "^1.1.0",
+    "node-twitter-api": "1.8.0",
+    "serve-favicon": "^2.3.0",
+    "stylus": "^0.51.1"
+  },
+  "devDependencies": {
+    "babel-eslint": "7.0.0 ",
+    "eslint": "3.7.1",
+    "eslint-config-airbnb": "12.0.0",
+    "eslint-plugin-import": "2.0.0"
+  }
+}
